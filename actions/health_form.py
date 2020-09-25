@@ -14,6 +14,7 @@ class HealthForm(FormAction):
     
     @staticmethod
     def required_slots(tracker):
+        print(tracker)
         if tracker.get_slot('confirm_exercise') == True:
             return ["confirm_exercise", "exercise", "sleep", "diet", "stress", "goal"]
         else:
