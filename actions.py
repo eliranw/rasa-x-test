@@ -25,3 +25,14 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+from typing import Any, Text, Dict, List, Union
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction
+
+
+class PostgresForm(FormAction):
+
+    def name(self):
+        return "postgres_form"
