@@ -6,7 +6,7 @@ from rasa_sdk.forms import FormAction
 from rasa_sdk.events import SlotSet, AllSlotsReset, Restarted, UserUtteranceReverted, ConversationPaused
 logger = logging.getLogger(__name__)
 
- class TechnologiesAction(Action):
+class TechnologiesAction(Action):
 
     def name(self) -> Text:
         return "technologies_action"
