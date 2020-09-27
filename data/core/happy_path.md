@@ -1,5 +1,5 @@
 ## survey happy path
-* greet
+* thankyou
     - utter_greet
 * affirm
     - health_form
