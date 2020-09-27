@@ -64,6 +64,8 @@ responses:
     text: What is your stress level right now 🧘 ?
   utter_ask_diet:
   - text: Did you stick to a healthy diet 🥦  yesterday?
+  utter_technologies:
+  - text: Hey
 actions:
 - utter_greet
 - utter_iamabot
@@ -77,5 +79,6 @@ actions:
 - utter_ask_goal
 - utter_ask_stress
 - utter_ask_diet
+- utter_technologies
 forms:
 - health_form
