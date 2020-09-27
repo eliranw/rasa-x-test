@@ -4,4 +4,4 @@
 
 ## survey technologies path
 * greet
-    - utter_technologies
+    - technologies
