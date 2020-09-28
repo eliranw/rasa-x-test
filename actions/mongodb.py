@@ -14,14 +14,14 @@ class Mongodb(Action):
 
     def getActions():
         actions=[]
-        #TODO AWX Call to get all templates with tag day1, day2, and info with mongodb label 
+        # TODO AWX Call to get all templates with tag day1, day2, and info with mongodb label 
         templates = []
         for template in templates:
 
     def getClusters():
-        actions=[]
-        #TODO AWX Call to get all templates with tag day1, day2, and info with mongodb label 
-        templates = []
+        actions = []
+        # TODO AWX Call to get all templates with tag day1, day2, and info with mongodb label 
+        clusters = []
         for template in templates:
 
     def run(self, dispatcher: CollectingDispatcher,
