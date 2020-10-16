@@ -11,13 +11,13 @@ logger = logging.getLogger(__name__)
 # TODO get name of tech from the inherited class
 
 OPTIONS = [{"button_text": "Create new mongodb cluster",
-            "intent": "day1",
+            "user_reply": "I want to create a mongodb cluster",
             "clusters_exist": False},
            {"button_text": "Manage an existing mongodb cluster",
-            "intent": "day2",
+            "user_reply": "I want to manage a mongodb cluster",
             "clusters_exist": True},
            {"button_text": "Get info about an existing mongodb cluster",
-            "intent": "info",
+            "user_reply": "I want to get info about a mongodb cluster",
             "clusters_exist": True}
            ]
 
@@ -29,7 +29,7 @@ class Mongodb(Action):
 
     def get_actions(self):
         actions = []
-        # TODO AWX Call to get all templates with tag day1, day2, and info with mongodb label 
+        # TODO AWX Call to get all templates with tag day1, day2, and info with mongodb label
         templates = []
         for template in templates:
             pass
@@ -47,7 +47,7 @@ class Mongodb(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         # Get name of Rocket.Chat channel so we can look for clusters in the user's namespace
-        input_channel = tracker.events[1]['input_channel']
+        # input_channel = tracker.events[1]['input_channel']
 
         # Feedback to user while searching for clusters
         dispatcher.utter_message(text="Getting all your clusters, be right back :)")
@@ -58,9 +58,10 @@ class Mongodb(Action):
         for option in OPTIONS:
             if option["clusters_exist"]:
                 if clusters_exist:
-                    buttons.append({"title": option["button_text"], "payload": option["intent"] + "_" + self.name()})
+                    buttons.append(
+                        {"title": option["button_text"], "payload": option["user_reply"]})
             else:
-                buttons.append({"title": option["button_text"], "payload": option["intent"] + "_" + self.name()})
+                buttons.append({"title": option["button_text"], "payload": option["user_reply"]})
 
         dispatcher.utter_message(text="I'm back homie, what would you like to do? ",
                                  buttons=buttons)
