@@ -111,3 +111,6 @@
 
 ## intent:MongoDB
 - MongoDB
+
+## intent:day1_mongodb
+- day1_mongodb

@@ -11,7 +11,8 @@ intents:
 - thankyou
 - out_of_scope
 - MongoDB
-- Postgres 
+- Postgres
+- day1_mongodb
 entities:
 - exercise
 - sleep
@@ -80,5 +81,6 @@ actions:
 - utter_ask_stress
 - utter_ask_diet
 - technologies
+- mongodb
 forms:
 - health_form
