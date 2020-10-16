@@ -6,7 +6,6 @@
 * greet
     - technologies
     
-
 ## survey mongodb path
 * mongodb
     - mongodb
