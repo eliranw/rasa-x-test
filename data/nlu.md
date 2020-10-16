@@ -108,3 +108,9 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:MongoDB
+- MongoDB
+
+## intent:day1_mongodb
+- day1_mongodb
