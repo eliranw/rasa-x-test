@@ -52,7 +52,7 @@ class Mongodb(Action):
         # Feedback to user while searching for clusters
         dispatcher.utter_message(text="Getting all your clusters, be right back :)")
 
-        clusters_exist = bool(len(self.getClusters()))
+        clusters_exist = bool(len(self.get_clusters()))
 
         buttons = []
         for option in OPTIONS:
